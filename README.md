@@ -23,52 +23,60 @@
 | Jecky Cossio | 572226 |
 | Felipi Godoy | 573741 |
 
-## Relatório para o professor com quatro gráficos
+## Sobre a entrega
 
-O [entregável em PDF](entrega/entregavel.pdf) usa a versão revisada fornecida pelo grupo, agora com onze páginas após os complementos de limites e derivadas. Mantém fonte Liberation Sans de 12 pontos, títulos e subtítulos em negrito, figuras de ocupação, derivada, integral e histórico e fórmulas em notação matemática. O [GeoGebra correspondente](entrega/S01_quatro_graficos.ggb), com o layout corrigido, acompanha esse relatório.
+Trabalho de Cálculo da Global Solution CitizenTech 2026.2, relacionado à solução Study Comfort. A análise considera a ocupação da sala S01, com capacidade de nove pessoas, em três dias simulados, no intervalo de 06h a 21h.
 
-O PDF contém os nomes e RMs registrados no contexto do projeto. Os dados continuam simulados. A finalização das páginas 2 e 3 está em `apoio/finalizar_pdf_anexado.py`, baseada no anexo preservado em `apoio/temporarios/finalizacao_anexo_20261113/original_anexado.pdf`. O complemento de 14/11 está em `apoio/incorporar_complemento.py`: acrescenta os limites laterais na página 4, insere a demonstração das derivadas e máximos dos Dias 2 e 3 na página 7 e renumera as páginas seguintes. O gerador `apoio/gerar_entregavel.py` corresponde à versão anterior de nove páginas e não deve ser usado para sobrescrever o PDF final.
+O relatório apresenta modelos quadráticos, limites, derivadas, máximos, integrais e comparação histórica. O arquivo GeoGebra acompanha a análise com quatro visualizações: ocupação, derivada, integral e histórico.
 
-O relatório usa fundo branco e escrita preta, com títulos e subtítulos em negrito. Não há tabelas ou fundos decorativos: integrantes, RMs, registros e comparações estão em parágrafos. As figuras estão em preto e branco; a área da integral é identificada por hachuras.
+## Materiais presentes no repositório
 
-Na finalização, a descrição passou a apresentar a Study Comfort, o Supabase e a análise restrita à ocupação da S01 com dados fictícios. A frase sobre a escolha dos registros para coincidir com as parábolas foi retirada da página 2. A página 3 explicita a forma geral da função do segundo grau e o papel de cada coeficiente. As outras oito páginas do anexo foram preservadas integralmente. A última seção continua sendo **Resultados e aplicação**; os cálculos dos três dias foram conferidos.
+| Arquivo | Conteúdo |
+| --- | --- |
+| [entregavel.pdf](entrega/entregavel.pdf) | Relatório final de 11 páginas com identificação da equipe, modelos, cálculos, quatro gráficos e interpretação dos resultados. |
+| [S01_quatro_graficos.ggb](entrega/S01_quatro_graficos.ggb) | Arquivo GeoGebra correspondente ao relatório, para explorar as visualizações e os cenários simulados. |
+| [entrega_math.zip](entrega/entrega_math.zip) | Pacote de entrega com o PDF e o arquivo GeoGebra na raiz. |
 
-O [ZIP de envio ao professor](entrega/entrega_math.zip) contém **somente dois arquivos**, na raiz: `entregavel.pdf` e `S01_quatro_graficos.ggb`. Documentação de apoio, geradores, dados separados, versões anteriores e temporários não integram esse pacote.
+## Como consultar
 
-## Versão simplificada preservada
+1. Abra ou baixe o [relatório em PDF](entrega/entregavel.pdf) para acompanhar as explicações e os cálculos.
+2. Baixe o [arquivo GGB](entrega/S01_quatro_graficos.ggb) e abra no GeoGebra. Consulte as orientações do relatório para explorar os quatro modos.
+3. Para obter os dois materiais juntos, baixe e extraia o [ZIP da entrega](entrega/entrega_math.zip).
 
-A versão simplificada anterior usa **um dia simulado e um único gráfico de ocupação**, com registros de 3 em 3 horas, das 06h às 21h. Limite, derivada e integral são explicados usando essa mesma curva. Não há seletores, gráfico separado de derivada, tela separada de integral ou histórico.
+Não é necessário executar Python para consultar o PDF ou abrir o GeoGebra.
 
-## Arquivos para usar
+## O que é analisado
 
-- [Abrir o GeoGebra anterior](apoio/versoes_anteriores/20261113_limpeza_entrega/S01_calculo_3h.ggb): os seis registros, a curva, o máximo estimado e a área acumulada no mesmo gráfico.
-- [Ler a explicação simples anterior em PDF](apoio/versoes_anteriores/20261113_limpeza_entrega/relatorio_calculo_S01.pdf): cinco páginas com variáveis, interpretação, contas e roteiro de apresentação.
-- [Passo a passo em texto](documentacao/PASSO_A_PASSO.md).
-- [Relação com as listas do ano](documentacao/ALINHAMENTO_ANO.md).
+- **Modelo matemático:** funções quadráticas para representar os três cenários diários de ocupação.
+- **Limites:** comportamento das funções próximo de um horário, incluindo limites laterais.
+- **Ocupação e máximo:** comparação com a capacidade da sala e estimativa do horário de pico.
+- **Derivada:** taxas de crescimento e diminuição da ocupação e identificação dos máximos.
+- **Integral:** uso acumulado em pessoa-hora e comparação entre períodos e dias.
+- **Histórico:** médias dos registros dos três dias para comparar horários.
 
-Os arquivos desta seção simplificada permanecem preservados localmente, mas não integram o ZIP de envio ao professor. Não é necessário executar Python para abrir GGB ou PDF.
+## Interpretação dos dados
 
-## Resultados do exemplo
+Os dados são fictícios e servem à demonstração acadêmica. A análise de Cálculo não utiliza medições físicas de uma sala nem representa uma coleta automática de dados do Wokwi.
 
-Registros: 1, 5, 7, 7, 5 e 1 pessoas, respectivamente às 06h, 09h, 12h, 15h, 18h e 21h. Capacidade adotada: 9 pessoas.
+As curvas estimam a ocupação entre os registros e podem assumir valores fracionários. A integral representa uso acumulado em pessoa-hora, não a quantidade de visitantes distintos. Três dias simulados não comprovam um padrão real de utilização; as conclusões ficam restritas aos cenários apresentados.
 
-Modelo: `N(x) = -x²/9 + 3x - 13`, apenas em `[6,21]`. Maior registro: 7 pessoas às 12h e às 15h. Máximo estimado da curva: 7,25 às 13h30. Limite em 12h: 7. Área no dia: 77,5 pessoa-horas. Média temporal do modelo: aproximadamente 5,17 pessoas.
+## Estrutura do repositório
 
-Os dados são fictícios e foram escolhidos para combinar com a função. A área não conta visitantes distintos. As leituras de 3h podem perder picos; um único dia não estabelece horários habituais de maior movimento. Não há coleta automática nem publicação diária no site.
-
-## Reproduzir
-
-Requer Python 3.10+, ReportLab e fontes Arial do Windows:
-
-```powershell
-python -m pip install reportlab
-python .\apoio\gerar_entrega.py
+```text
+README.md
+entrega/
+├── entregavel.pdf
+├── S01_quatro_graficos.ggb
+└── entrega_math.zip
 ```
 
-O gerador usa caminhos relativos ao próprio arquivo e a captura `apoio/evidencias_ano/01_ocupacao.png`, já incluída. Grava GGB e PDF em `entrega/`, e CSV, JSON e XML em `apoio/`. O ZIP é preparado separadamente; não se atualiza sozinho. Editar apenas o CSV não altera a curva; os coeficientes e textos estão no gerador.
+## Pacote para entrega
 
-## Versões guardadas
+O arquivo `entrega/entrega_math.zip` contém somente:
 
-A versão anterior, com os quatro modos e os dois PDFs, está no arquivo externo `../versão_antiga.zip`. A primeira solução complexa continua separada em `../solucao_complexa.zip`. Nenhum desses arquivos integra o pacote atual ou é necessário para abri-lo.
+```text
+entregavel.pdf
+S01_quatro_graficos.ggb
+```
 
-Os materiais completos das aulas e os temporários permanecem somente no apoio local, fora do ZIP. A equipe deve conferir sua identificação e a rubrica do professor antes de submeter. Nenhuma submissão foi feita.
+Os arquivos dentro do ZIP correspondem às versões disponíveis separadamente na pasta `entrega`.
